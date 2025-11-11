@@ -34,6 +34,35 @@ app.get("/api/movies/:id", (req, res) => {
   else res.status(404).json({ error: "Película no encontrada" });
 });
 
+// Añadir comentario a una película (persistente en data/movies.json)
+app.post("/api/movies/:id/comment", (req, res) => {
+  try {
+    const dataPath = path.join(__dirname, "data", "movies.json");
+    const data = JSON.parse(fs.readFileSync(dataPath));
+    const movie = data.find(m => m.id === parseInt(req.params.id));
+    if (!movie) return res.status(404).json({ error: "Película no encontrada" });
+
+    const { user, text } = req.body;
+    if (!user || !text) return res.status(400).json({ error: "Faltan campos" });
+
+    const comment = {
+      user: String(user).substring(0, 100),
+      text: String(text).substring(0, 1000),
+      date: new Date().toISOString()
+    };
+
+    movie.comments = movie.comments || [];
+    movie.comments.push(comment);
+
+    fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
+
+    return res.status(201).json({ success: true, comment });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ error: 'Error al guardar el comentario' });
+  }
+});
+
 // Ruta raíz: servir index.html
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "index.html"));

@@ -92,3 +92,27 @@ h2 {
   object-fit: cover;
   border-radius: 10px;
 }
+
+/* estilos para la página de detalle de película */
+.movie-detail {
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  text-align: left;
+}
+.movie-detail .back { display: inline-block; margin-bottom: 0.5rem; color: #fff; }
+.movie-detail .meta { display: flex; gap: 1rem; align-items: flex-start; }
+.movie-detail .poster { width: 220px; height: 320px; object-fit: cover; border-radius: 6px; }
+.movie-detail .info h1 { margin: 0 0 0.5rem 0; color: #ff8080; }
+.movie-detail .synopsis { color: #ddd; }
+.tag { background:#222; color:#ffb3b3; padding:2px 8px; border-radius:12px; margin-right:6px; font-size:0.9rem; }
+
+.player { margin-top: 1rem; display:flex; justify-content:center; }
+
+.comments-section { margin-top: 1.5rem; }
+.comment { background: rgba(255,255,255,0.03); padding: 0.6rem; border-radius:6px; margin-bottom:0.6rem; }
+.comment b { color:#fff; }
+.comment small { color:#bbb; margin-left:8px; }
+.comment-form { display:flex; flex-direction:column; gap:0.5rem; }
+.comment-form input, .comment-form textarea { width:100%; padding:8px; border-radius:6px; border:1px solid #333; background:#000; color:#fff; }
+.comment-form button { width:120px; padding:8px; border-radius:6px; background:#ff4040; color:#fff; border:none; cursor:pointer; }
