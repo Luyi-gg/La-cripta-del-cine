@@ -14,6 +14,8 @@ async function init() {
 
   renderCarousel("", carousels.recommended, "carousel-recommended");
   renderCarousel("la Favoritas de Japón", carousels.favoritesJapan, "carousel-favoritesJapan");
+  renderCarousel("Favoritas de España", carousels.favoritesSpain || [], "carousel-favoritesSpain");
+  renderCarousel("Favoritas de USA", carousels.favoritesUSA || [], "carousel-favoritesUSA");
   // Después de renderizar carruseles, inicializar lista paginada y botones
   renderAllMovies(1); // página inicial
   setupCarouselButtons();
@@ -106,6 +108,8 @@ function handleSearch(e) {
     // Re-renderizar carruseles y lista completa en página 1
     renderCarousel("", (window.G_carousels && window.G_carousels.recommended) || [], "carousel-recommended");
     renderCarousel("la Favoritas de Japón", (window.G_carousels && window.G_carousels.favoritesJapan) || [], "carousel-favoritesJapan");
+    renderCarousel("Favoritas de España", (window.G_carousels && window.G_carousels.favoritesSpain) || [], "carousel-favoritesSpain");
+    renderCarousel("Favoritas de USA", (window.G_carousels && window.G_carousels.favoritesUSA) || [], "carousel-favoritesUSA");
     renderAllMovies(1);
     setupCarouselButtons();
     // Si preferimos recargar desde servidor, descomentar la siguiente línea:
