@@ -8,7 +8,7 @@ body {
 }
 
 header {
-  background: #111;
+  background: #150022;
   padding: 1rem;
   position: sticky;
   top: 0;
@@ -21,7 +21,7 @@ h1 {
 
 h2 {
   margin-top: 2rem;
-  color: #ff4040;
+  color: #ff7b00;
 }
 
 .carousel-wrapper {
@@ -59,8 +59,8 @@ h2 {
 }
 
 .arrow {
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
+  background: rgba(50, 0, 70, 0.6);
+  color: #e5d7ff;
   border: none;
   font-size: 2rem;
   padding: 10px;
@@ -70,7 +70,7 @@ h2 {
 }
 
 .arrow:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 123, 0, 0.4);
 }
 
 /* layout del carrusel interno: los .card deben alinearse en fila */
@@ -87,6 +87,7 @@ h2 {
 }
 
 .card img {
+  border: 2px solid #9b4dff; 
   width: 100%;
   height: 260px;
   object-fit: cover;
@@ -100,25 +101,25 @@ h2 {
   padding: 1rem;
   text-align: left;
 }
-.movie-detail .back { display: inline-block; margin-bottom: 0.5rem; color: #fff; }
+.movie-detail .back { display: inline-block; margin-bottom: 0.5rem; color: #d36bff; }
 .movie-detail .meta { display: flex; gap: 1rem; align-items: flex-start; }
 .movie-detail .poster { width: 220px; height: 320px; object-fit: cover; border-radius: 6px; }
-.movie-detail .info h1 { margin: 0 0 0.5rem 0; color: #ff8080; }
-.movie-detail .synopsis { color: #ddd; }
-.tag { background:#222; color:#ffb3b3; padding:2px 8px; border-radius:12px; margin-right:6px; font-size:0.9rem; }
+.movie-detail .info h1 { margin: 0 0 0.5rem 0; color: #ff7b00; }
+.movie-detail .synopsis { color: #e5d7ff; }
+.tag { background:#2a0040; color:#d36bff; padding:2px 8px; border-radius:12px; margin-right:6px; font-size:0.9rem; }
 
 .player { margin-top: 1rem; display:flex; justify-content:center; }
 
-.levels { margin-top:0.6rem; color:#ffd1d1; }
+.levels { margin-top:0.6rem; color:#ffa64d; }
 .levels strong { color:#fff; margin-right:4px; }
 
 .comments-section { margin-top: 1.5rem; }
-.comment { background: rgba(255,255,255,0.03); padding: 0.6rem; border-radius:6px; margin-bottom:0.6rem; }
-.comment b { color:#fff; }
-.comment small { color:#bbb; margin-left:8px; }
+.comment { background: rgba(155, 77, 255, 0.1); padding: 0.6rem; border-radius:6px; margin-bottom:0.6rem; }
+.comment b { color:#d36bff; }
+.comment small { color:#cbb3ff; margin-left:8px; }
 .comment-form { display:flex; flex-direction:column; gap:0.5rem; }
-.comment-form input, .comment-form textarea { width:100%; padding:8px; border-radius:6px; border:1px solid #333; background:#000; color:#fff; }
-.comment-form button { width:120px; padding:8px; border-radius:6px; background:#ff4040; color:#fff; border:none; cursor:pointer; }
+.comment-form input, .comment-form textarea { width:100%; padding:8px; border-radius:6px; border:1px solid #3a0055; background:#0a0014; color:#e5d7ff; }
+.comment-form button { width:120px; padding:8px; border-radius:6px; background:#9b4dff; color:#fff; border:none; cursor:pointer; }
 
 /* Estilos para la lista paginada en la página principal */
 .movies-grid {
@@ -132,6 +133,6 @@ h2 {
 .movie-small-title { margin: 6px 0 0 0; font-size: 0.95rem; color:#fff; }
 
 .pagination { display:flex; gap:6px; justify-content:center; margin-bottom:1.2rem; }
-.page-btn { padding:6px 10px; background:#111; color:#fff; border-radius:6px; border:1px solid #333; cursor:pointer; }
+.page-btn { padding:6px 10px; background:#1a0033; color:#e5d7ff; border-radius:6px; border:1px solid #3a0055; cursor:pointer; }
 .page-btn[disabled] { opacity:0.4; cursor:default; }
-.page-btn.active { background:#ff4040; border-color:#ff4040; }
+.page-btn.active { background:#ff7b00; border-color:#ff7b00; }
